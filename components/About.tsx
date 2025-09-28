@@ -5,10 +5,8 @@ import { Timeline } from "./ui/Timeline";
 import Image from "next/image";
 import NEUImage from "../components/resources/NEUImage.jpg";
 import CiscoImage1 from "../components/resources/Cisco1.jpg";
-import { BackgroundRipple } from "./ui/BackgroundRipple";
 import { BackgroundGradient } from "./ui/BackgroundGradient";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
-import { SpotlightNew } from "./ui/SpotlightNew";
 import PersonalImage from "../components/resources/PersonalImage.jpg";
 import { ScrollIndicator } from "./ui/ScrollIndicator";
 

@@ -28,12 +28,13 @@ const About = () => {
           <p className="text-base md:text-lg text-neutral-700 dark:text-neutral-300 max-w-3xl">
             A <b>software engineer</b> and aspiring developer passionate about
             building impactful technology solutions. With a strong foundation in
-            computer science and hands-on experience in <b>full-stack development,
-            cloud computing, and AI/ML</b>, I focus on designing scalable systems
-            that solve real-world problems. My work ranges from developing
-            intelligent applications to automating workflows that improve
-            efficiency and deliver measurable impact.
-            <br></br><br></br>
+            computer science and hands-on experience in{" "}
+            <b>full-stack development, cloud computing, and AI/ML</b>, I focus
+            on designing scalable systems that solve real-world problems. My
+            work ranges from developing intelligent applications to automating
+            workflows that improve efficiency and deliver measurable impact.
+            <br></br>
+            <br></br>
             Driven by a blend of creativity and technical rigor, I’ve
             contributed to projects that span web development, NLP, cloud
             architecture, and automation. Whether it’s building AI-powered
@@ -84,8 +85,8 @@ const About = () => {
                     <p className="text-base">
                       Started pursuing{" "}
                       <span className="text-accent font-bold">
-                        Master's in Computer Science at Northeastern University,
-                        Boston
+                        Master&apos;s in Computer Science at Northeastern
+                        University, Boston
                       </span>
                       ,<br />
                       <span className="block text-accent-foreground">

@@ -1,24 +1,26 @@
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "motion/react";
-import Image from "next/image";
-
+import Image, { StaticImageData } from "next/image";
 import { JSX, useState } from "react";
+
+interface HoverItem {
+  title: string;
+  description: string;
+  link: string;
+  image?: string | StaticImageData;
+  details?: string | JSX.Element;
+}
+
+interface HoverEffectProps {
+  items: HoverItem[];
+  className?: string;
+  onItemClick?: (item: HoverItem) => void;
+}
 
 export const HoverEffect = ({
   items,
   className,
   onItemClick,
-}: {
-  items: {
-    title: string;  
-    description: string;
-    link: string;
-    image?: any;
-    details?: string | JSX.Element; // <-- Allow JSX.Element here too
-  }[];
-  className?: string;
-  onItemClick?: (item: any) => void;
-}) => {
+}: HoverEffectProps) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
@@ -31,14 +33,14 @@ export const HoverEffect = ({
       {items.map((item, idx) => (
         <div
           key={idx}
-          className="relative group block h-full w-full cursor-pointer"
+          className={cn(
+            "relative group block h-full w-full cursor-pointer",
+            hoveredIndex === idx && "shadow-lg scale-105 transition-transform"
+          )}
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
           onClick={() => onItemClick?.(item)}
         >
-          {/* Hover effect */}
-          {/* ... your existing hover code ... */}
-
           <Card className="flex flex-col h-[400px]">
             {item.image && (
               <div className="relative w-full flex-shrink-0 h-[60%] rounded-t-2xl overflow-hidden">
@@ -60,7 +62,6 @@ export const HoverEffect = ({
     </div>
   );
 };
-
 
 export const Card = ({
   className,
@@ -94,6 +95,7 @@ export const CardTitle = ({
     </h4>
   );
 };
+
 export const CardDescription = ({
   className,
   children,

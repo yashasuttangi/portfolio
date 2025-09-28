@@ -1,13 +1,26 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import PlacementPortal1 from "../components/resources/Projects/PlacementPortal/PlacementPortal1.png";
 import ProjectImage2 from "../components/resources/NEUImage.jpg";
 import ProjectImage3 from "../components/resources/NEUImage.jpg";
 import { BentoGrid } from "./ui/BentoGrid";
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  image: string | StaticImageData; // Next.js Image type
+  link: string;
+  details?: React.ReactElement;
+}
+
+interface BentoGridProps {
+  items: Project[];
+  onItemClick: (project: Project) => void;
+}
+
+const projects: Project[] = [
   {
     title: "Placement Portal",
     description:
@@ -26,12 +39,6 @@ const projects = [
           Fusce in ex non justo dictum imperdiet. Proin nec sapien id nunc
           malesuada luctus.
         </p>
-        {/* <img
-          src="/path/to/placement-image.jpg"
-          alt="Placement Portal visual"
-          className="rounded-lg shadow-lg"
-        />
-        */}
         <button
           className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-800"
           onClick={() => window.open("https://sjceplacements.org/", "_blank")}
@@ -41,7 +48,6 @@ const projects = [
       </div>
     ),
   },
-
   {
     title: "Automated Identification of Medicine Prescription",
     description:
@@ -50,17 +56,7 @@ const projects = [
     link: "/projects/prescription-ocr",
     details: (
       <div className="space-y-4">
-        <p>
-          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        {/* <a
-          href="https://drive.google.com/file/d/1iP1RNCS3lTvaDd8Dwb5fjcOTO25BHIol/view?usp=drive_link"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-500 underline"
-        >
-          Read more about the project
-        </a> */}
+        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <button
           className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-800"
           onClick={() =>
@@ -75,7 +71,6 @@ const projects = [
       </div>
     ),
   },
-
   {
     title: "AikyaMind Mental Health App",
     description:
@@ -85,23 +80,9 @@ const projects = [
     details: (
       <div className="space-y-4">
         <p>
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+          ut aliquip.
         </p>
-        {/* <a
-          href="https://play.google.com/store/apps/details?id=com.aikyamind.aikyamind&hl=en_US"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-500 underline"
-        >
-          AikyaMind App
-        </a> */}
-        {/* <img
-          src="/path/to/aikyamind-image.jpg"
-          alt="AikyaMind visual"
-          className="rounded-lg shadow-lg"
-        />
-        */}
         <button
           className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-800"
           onClick={() =>
@@ -119,9 +100,9 @@ const projects = [
 ];
 
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const handleProjectClick = (project: any) => {
+  const handleProjectClick = (project: Project) => {
     setSelectedProject(project);
   };
 

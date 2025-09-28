@@ -87,11 +87,11 @@ const Hero = () => {
           <div className="lg:w-2/3 flex flex-col space-y-6 px-12 lg:px-16">
             <TextGenerateEffect
               className="text-left text-[36px] md:text-5xl lg:text-6xl font-bold z-20"
-              words="Hi, I'm Yashas, a Software Engineer based in Boston."
+              words="Hi, I&apos;m Yashas, a Software Engineer based in Boston."
             />
             <p className="text-lg opacity-80 z-20">
               I build AI-powered solutions, full-stack applications, and
-              automation systems that make a real impact. Let's innovate
+              automation systems that make a real impact. Let&apos;s innovate
               together.
             </p>
           </div>

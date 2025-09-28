@@ -5,22 +5,9 @@ import Image, { StaticImageData } from "next/image";
 import PlacementPortal1 from "../components/resources/Projects/PlacementPortal/PlacementPortal1.png";
 import ProjectImage2 from "../components/resources/NEUImage.jpg";
 import ProjectImage3 from "../components/resources/NEUImage.jpg";
-import { BentoGrid } from "./ui/BentoGrid";
+import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 
-interface Project {
-  title: string;
-  description: string;
-  image: string | StaticImageData; // Next.js Image type
-  link: string;
-  details?: React.ReactElement;
-}
-
-interface BentoGridProps {
-  items: Project[];
-  onItemClick: (project: Project) => void;
-}
-
-const projects: Project[] = [
+const projects: BentoGridItem[] = [
   {
     title: "Placement Portal",
     description:
@@ -100,9 +87,9 @@ const projects: Project[] = [
 ];
 
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [selectedProject, setSelectedProject] = useState<BentoGridItem | null>(null);
 
-  const handleProjectClick = (project: Project) => {
+  const handleProjectClick = (project: BentoGridItem) => {
     setSelectedProject(project);
   };
 
@@ -111,17 +98,13 @@ const Projects = () => {
       <div style={{ paddingTop: 70 }}></div>
       <h1 className="text-4xl font-bold mb-10">My Projects</h1>
 
-      {/* Divider */}
       <hr className="w-full border-t border-gray-300 dark:border-gray-700 mb-5" />
 
-      {/* Pass click handler to grid */}
       <BentoGrid items={projects} onItemClick={handleProjectClick} />
 
-      {/* Modal */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-start justify-center bg-black/50 backdrop-blur-sm overflow-auto py-15">
           <div className="relative bg-white dark:bg-neutral-900 rounded-lg shadow-lg max-w-4xl w-full p-12 flex flex-col md:flex-row gap-5">
-            {/* Close button */}
             <button
               onClick={() => setSelectedProject(null)}
               className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 dark:hover:text-gray-200 text-2xl"
@@ -129,7 +112,6 @@ const Projects = () => {
               ✕
             </button>
 
-            {/* Left Content */}
             <div className="flex-1 pr-4">
               <h2 className="text-2xl font-bold mb-4">
                 {selectedProject.title}
@@ -139,10 +121,9 @@ const Projects = () => {
               </div>
             </div>
 
-            {/* Right Image */}
             <div className="w-full md:w-1/2 flex-shrink-0 relative h-96 rounded-lg overflow-hidden">
               <Image
-                src={selectedProject.image}
+                src={selectedProject.image!}
                 alt={selectedProject.title}
                 fill
                 style={{ objectFit: "cover" }}

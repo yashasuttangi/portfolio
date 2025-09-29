@@ -5,33 +5,51 @@ import Image from "next/image";
 import PlacementPortal1 from "../components/resources/Projects/PlacementPortal/PlacementPortal1.png";
 import ProjectImage2 from "../components/resources/NEUImage.jpg";
 import ProjectImage3 from "../components/resources/NEUImage.jpg";
+import AikyaMind1 from "../components/resources/Projects/AikyaMind/AikyaMind1.jpg";
+import AikyaMind2 from "../components/resources/Projects/AikyaMind/AikyaMind2.jpg";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 
 const projects: BentoGridItem[] = [
   {
-    title: "Placement Portal",
+    title: "Placement and Alumni Portal",
     description:
-      "Platform to streamline recruitment processes with over 3,000+ users onboarded.",
+      "Platform to streamline recruitment processes and foster alumni interaction, with over 3,000+ users onboarded.",
     image: PlacementPortal1,
     link: "/projects/placement-portal",
     details: (
-      <div className="space-y-4">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-          vitae eros eget nunc fermentum dapibus. Pellentesque habitant morbi
-          tristique senectus et netus et malesuada fames ac turpis egestas.
-        </p>
-        <p>
-          Integer vel lacus eget sapien viverra posuere. Suspendisse potenti.
-          Fusce in ex non justo dictum imperdiet. Proin nec sapien id nunc
-          malesuada luctus.
-        </p>
-        <button
-          className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-800"
-          onClick={() => window.open("https://sjceplacements.org/", "_blank")}
-        >
-          Visit the website
-        </button>
+      <div className="flex flex-col space-y-4 h-full">
+        <div className="space-y-4 flex-grow">
+          <p>
+            The Placement and Alumni Portal was developed to address a vital need in the recruitment process at our university.  
+            It serves as a centralized platform where companies can list openings, and students can apply directly through secure logins.  
+            The portal allows students to track their applications and monitor their recruitment journey efficiently.
+          </p>
+          <p>
+            This initiative greatly enhanced the recruitment workflow for both students and the university, fostering seamless engagement 
+            between industry and academia. The portal also includes dedicated features to strengthen alumni interaction.
+          </p>
+          <p>
+            The success of this project was recognized at the university level, and the team — Harsh R. Shah, Shomik Ghosk, Vishal Mishra, 
+            Yashas Uttangi, and Naman Oil — was felicitated for their contribution in developing the software.
+          </p>
+          <a
+            href="https://starofmysore.com/young-alumni-meet-to-commemorate-sjces-diamond-jubilee-year-celebration/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-purple-600 underline hover:text-purple-800 block"
+          >
+            Read about the felicitation here
+          </a>
+        </div>
+
+        <div>
+          <button
+            className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-800 mt-auto"
+            onClick={() => window.open("https://sjceplacements.org/", "_blank")}
+          >
+            Visit the website
+          </button>
+        </div>
       </div>
     ),
   },
@@ -43,7 +61,9 @@ const projects: BentoGridItem[] = [
     link: "/projects/prescription-ocr",
     details: (
       <div className="space-y-4">
-        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>
+          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
         <button
           className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-800"
           onClick={() =>
@@ -61,33 +81,54 @@ const projects: BentoGridItem[] = [
   {
     title: "AikyaMind Mental Health App",
     description:
-      "A mobile app providing self-diagnosis, counselling, and resources for mental health.",
-    image: ProjectImage3,
+      "A mobile app providing self-diagnosis, counselling, and mental health resources for individuals.",
+    image: AikyaMind2,
     link: "/projects/aikyamind",
     details: (
-      <div className="space-y-4">
-        <p>
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-          ut aliquip.
-        </p>
-        <button
-          className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-800"
-          onClick={() =>
-            window.open(
-              "https://play.google.com/store/apps/details?id=com.aikyamind.aikyamind&hl=en_US",
-              "_blank"
-            )
-          }
-        >
-          Checkout the app
-        </button>
+      <div className="flex flex-col space-y-4 h-full">
+        <div className="space-y-4 flex-grow">
+          <p>
+            <strong>AikyaMind</strong> is a mobile mental health application developed for <strong>JSS Medical College</strong> 
+            to empower users with self-diagnosis tools, counselling resources, and mental well-being support.  
+            The app uses an intelligent chatbot system to guide users through personalized mental health assessments, suggest coping strategies, 
+            and connect them with appropriate resources.
+          </p>
+          <p>
+            Built with Flutter and Firebase, AikyaMind emphasizes privacy, accessibility, and user-friendly navigation.  
+            It addresses the growing need for accessible mental health care by providing instant assistance and reducing the stigma around seeking help.
+          </p>
+          <Image
+            src={AikyaMind1}
+            alt="AikyaMind App Screenshot"
+            className="rounded-lg"
+            style={{ objectFit: "contain" }}
+            width={600}
+            height={400}
+          />
+        </div>
+
+        <div>
+          <button
+            className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-800 mt-auto"
+            onClick={() =>
+              window.open(
+                "https://play.google.com/store/apps/details?id=com.aikyamind.aikyamind&hl=en_US",
+                "_blank"
+              )
+            }
+          >
+            Checkout the app
+          </button>
+        </div>
       </div>
     ),
   },
 ];
 
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState<BentoGridItem | null>(null);
+  const [selectedProject, setSelectedProject] = useState<BentoGridItem | null>(
+    null
+  );
 
   const handleProjectClick = (project: BentoGridItem) => {
     setSelectedProject(project);
@@ -95,10 +136,11 @@ const Projects = () => {
 
   return (
     <div className="relative flex flex-col items-start justify-start min-h-screen w-full px-5 py-16">
-      <div style={{ paddingTop: 70 }}></div>
-      <h1 className="text-4xl font-bold mb-10">My Projects</h1>
+      <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 w-[120%] h-[100%] bg-gradient-to-br from-purple-400/30 to-blue-400/20 rounded-[50%] blur-3xl z-0"></div>
 
-      <hr className="w-full border-t border-gray-300 dark:border-gray-700 mb-5" />
+      <h1 className="text-4xl font-bold mb-10 mt-20 z-10 relative">My Projects</h1>
+
+      <hr className="w-full border-t border-gray-300 dark:border-gray-700 mb-5 z-10 relative" />
 
       <BentoGrid items={projects} onItemClick={handleProjectClick} />
 
@@ -126,7 +168,7 @@ const Projects = () => {
                 src={selectedProject.image!}
                 alt={selectedProject.title}
                 fill
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "contain" }}
               />
             </div>
           </div>

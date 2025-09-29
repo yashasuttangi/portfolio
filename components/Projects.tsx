@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import PlacementPortal1 from "../components/resources/Projects/PlacementPortal/PlacementPortal1.png";
 import ProjectImage2 from "../components/resources/NEUImage.jpg";
 import ProjectImage3 from "../components/resources/NEUImage.jpg";

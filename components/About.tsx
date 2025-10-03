@@ -171,7 +171,7 @@ const About = () => {
                 ),
               },
               {
-                title: "Aug 2023",
+                title: "Jan 2023",
                 content: (
                   <div>
                     <p className="text-base">

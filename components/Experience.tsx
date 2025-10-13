@@ -13,9 +13,25 @@ const appreciations = [
   },
   {
     quote:
+      "Along with delivering your sprint tasks and coming up with innovative solutions, you have put in extra efforts to avoid any scope spillovers from React for our application launch. Apart from this, you accepted the challenge of changing the look and feel of the UI in such a short time by going above and beyond your assigned work. Truly demonstrates your commitment and accountability along with passion you have for what you do! Everyone from our leadership to stakeholders loved the new face of the application and definitely helped in creating the 'Aha' moment we were looking for, keep up the great work!",
+    name: "Sanjana Pentomshetty",
+    title: "Design Architect",
+  },
+  {
+    quote: "Really appreciate your dedicated efforts in making the Soft Launch 2 a great success. Your commitment to developing the right solutions, going the extra mile during resource constraints, collaborating with cross-functional teams, and ensuring a high-quality product is delivered to the business within the promised timelines is truly commendable.",
+    name: "Elizabeth Jose",
+    title: "Leader, Software Engineering"
+  },
+  {
+    quote:
       "Experts say that the first year of a new job is the toughest time, where you adjust to a new environment, learn new responsibilities, and build new relationships. It often involves a steep learning curve and can be very demanding. Congratulations on accomplishing the toughest milestone of completing your first-work anniversary. You have mastered UiPath, contributed to one of the high-priority initiatives in Test Automation, and continute to learn new things every day. Awesome job, keep up the great work !",
     name: "Raghu Ramamoorthy",
     title: "Head of Information Technology, Partner Compensation",
+  },
+  {
+    quote: "Thank you for the outstanding work you are doing in the development of the application's UI. Your contributions have been instrumental in delivering key feaures and ensuring a smooth and intuitive user experience. Your attention to detail, commitment to quality, and dedication to enhancing the platform are truly appreciated. Keep up the great work!",
+    name: "Akash Rotti",
+    title: "React Dev Lead",
   },
   {
     quote:
@@ -23,18 +39,8 @@ const appreciations = [
     name: "Deepti Santosh Thite",
     title: "Business Analyst Manager / QA Lead",
   },
-  {
-    quote:
-      "Thank you for the outstanding work you are doing in the development of the application's UI. Your contributions have been instrumental in delivering key feaures and ensuring a smooth and intuitive user experience. Your attention to detail, commitment to quality, and dedication to enhancing the platform are truly appreciated. Keep up the great work!",
-    name: "Akash Rotti",
-    title: "React Lead",
-  },
-  {
-    quote:
-      "Along with delivering your sprint tasks and coming up with innovative solutions, you have put in extra efforts to avoid any scope spillovers from React for our application launch. Apart from this, you accepted the challenge of changing the look and feel of the UI in such a short time by going above and beyond your assigned work. Truly demonstrates your commitment and accountability along with passion you have for what you do! Everyone from our leadership to stakeholders loved the new face of the application and definitely helped in creating the 'Aha' moment we were looking for, keep up the great work!",
-    name: "Sanjana Pentomsheety",
-    title: "Design Architect",
-  },
+  
+  
 ];
 
 const roles = [

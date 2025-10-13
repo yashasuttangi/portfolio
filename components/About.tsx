@@ -5,16 +5,16 @@ import { Timeline } from "./ui/Timeline";
 import Image from "next/image";
 import NEUImage from "../components/resources/NEUImage.jpg";
 import CiscoImage1 from "../components/resources/Cisco1.jpg";
+import TCSImg from "../components/resources/Certificates/TCS-Certificate.png";
+import F13Image from "../components/resources/Certificates/F13-certificate.jpeg";
 import { BackgroundGradient } from "./ui/BackgroundGradient";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import PersonalImage from "../components/resources/PersonalImage.jpg";
 import { ScrollIndicator } from "./ui/ScrollIndicator";
-import { BackgroundRippleEffect } from "./ui/BackgroundRipple";
 
 const About = () => {
   return (
     <div className="relative flex min-h-screen w-full flex-col items-center justify-start overflow-hidden">
-             
       {/* ---------- About Me Section ---------- */}
       <section className="relative z-10 flex flex-col md:flex-row items-center max-w-7xl w-full px-5 py-16 gap-10">
         {/* Left side: Text */}
@@ -131,15 +131,14 @@ const About = () => {
                 content: (
                   <div>
                     <p className="text-base">
-                      Joined{" "}
-                      <span className="text-accent font-semibold">
-                        Cisco Systems Inc.
-                      </span>{" "}
-                      as a{" "}
+                      Joined as a{" "}
                       <span className="text-accent font-semibold">
                         Software Engineer
+                      </span>{" "}
+                      at{" "}
+                      <span className="text-accent font-semibold">
+                        Cisco Systems Inc, India.{" "}
                       </span>
-                      .<br />
                       <span className="block text-accent-foreground mt-1">
                         Built end-to-end software solutions that drove
                         innovation, operational efficiency, and measurable
@@ -208,59 +207,139 @@ const About = () => {
                 ),
               },
               {
-                title: "Jan 2023",
+                title: "Feb 2023",
                 content: (
                   <div>
                     <p className="text-base">
-                      Began my internship at{" "}
+                      <b>Technical Undergraduate Intern</b> at{" "}
                       <span className="text-accent font-semibold">
-                        Cisco Systems Inc.
+                        Cisco Systems Inc, India
                       </span>
                       .<br />
                       <span className="block text-accent-foreground">
-                        Built end-to-end solutions to deliver innovation,
-                        efficiency, and measurable results.
+                        Developed innovative automation solutions and optimized
+                        backend processes for efficiency and reliability.
                       </span>
                     </p>
 
                     <ul className="list-disc list-inside mt-2 ml-4 text-sm text-white space-y-2">
                       <li>
-                        Recognized 4× with the Cisco IT Challenge Coin for
-                        solving critical business problems and delivering
-                        high-impact solutions.
+                        Developed an RPA framework using UiPath Test Automation
+                        to automate 1200+ regression test cases, reducing manual
+                        effort by 75% and improving bug detection accuracy.
                       </li>
                       <li>
-                        Co-led development of the Partner Compensation Platform,
-                        delivering 100+ features with peer-reviewed,
-                        high-quality code.
+                        Accelerated release cycles by doubling testing
+                        throughput and halving execution time, enabling faster
+                        and more reliable rollouts.
                       </li>
                       <li>
-                        Built a rebate modeling engine that improved system
-                        accuracy by 50% and optimized budget allocations for
-                        business teams.
-                      </li>
-                      <li>
-                        Developed CI/CD pipelines, accelerating deployments by
-                        30% and improving release efficiency.
-                      </li>
-                      <li>
-                        Created a Snowflake CI/CD pipeline, transforming a
-                        hackathon prototype into a production-ready solution
-                        adopted organization-wide.
-                      </li>
-                      <li>
-                        Built an AI chatbot using the MCP paradigm to automate
-                        report generation, reducing manual effort by 60%.
+                        Optimized PL/SQL views and stored procedures through
+                        query tuning and indexing, reducing execution time by
+                        40% and boosting data efficiency.
                       </li>
                     </ul>
 
-                    <Image
-                      src={CiscoImage1}
-                      alt="Cisco Timeline Image"
-                      width={200}
-                      height={100}
-                      style={{ paddingTop: "15px" }}
-                    />
+                    {/* Image Section */}
+                    <div className="flex-shrink-0" style={{ paddingTop: 20 }}>
+                      <div className="w-80 h-50 bg-gray-300 dark:bg-gray-700 rounded-[8%] overflow-hidden relative">
+                        <Image
+                          src={CiscoImage1}
+                          alt="Timeline Image"
+                          fill
+                          style={{ objectFit: "cover" }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                ),
+              },
+              {
+                title: "Jun 2022",
+                content: (
+                  <div>
+                    <p className="text-base">
+                      <b>Project Intern</b> at{" "}
+                      <span className="text-accent font-semibold">
+                        Tata Consultancy Services, India
+                      </span>
+                      .<br />
+                      <span className="block text-accent-foreground">
+                        Built an autonomous vehicle prototype showcasing
+                        self-driving capabilities using computer vision and
+                        sensor integration.
+                      </span>
+                    </p>
+
+                    <ul className="list-disc list-inside mt-2 ml-4 text-sm text-white space-y-2">
+                      <li>
+                        Built a scale model autonomous vehicle demonstrating
+                        self-driving capabilities using computer vision and
+                        sensor integration.
+                      </li>
+                      <li>
+                        Implemented real-time object detection and path planning
+                        algorithms, enabling autonomous navigation in dynamic
+                        environments.
+                      </li>
+                    </ul>
+                    {/* Image Section */}
+                    <div className="flex-shrink-0" style={{ paddingTop: 20 }}>
+                      <div className="w-60 h-40 bg-gray-300 dark:bg-gray-700 rounded-[5%] overflow-hidden relative">
+                        <Image
+                          src={TCSImg}
+                          alt="Timeline Image"
+                          fill
+                          style={{ objectFit: "cover" }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                ),
+              },
+              {
+                title: "Oct 2021",
+                content: (
+                  <div>
+                    <p className="text-base">
+                      <b>AWS Cloud Intern</b> at{" "}
+                      <span className="text-accent font-semibold">
+                        F13 Technologies, Bengaluru, India
+                      </span>
+                      .<br />
+                      <span className="block text-accent-foreground">
+                        Gained hands-on experience in cloud architecture,
+                        security, and deployment by completing six AWS
+                        certifications.
+                      </span>
+                    </p>
+
+                    <ul className="list-disc list-inside mt-2 ml-4 text-sm text-white space-y-2">
+                      <li>
+                        Designed and implemented cloud infrastructure solutions
+                        using AWS EC2, S3, RDS, and Lambda, optimizing
+                        performance and scalability.
+                      </li>
+                      <li>
+                        Configured IAM and VPC to build secure, scalable cloud
+                        environments adhering to AWS best practices.
+                      </li>
+                      <li>
+                        Earned six AWS certifications, gaining expertise across
+                        cloud architecture, security, and deployment.
+                      </li>
+                    </ul>
+                    {/* Image Section */}
+                    <div className="flex-shrink-0" style={{ paddingTop: 20 }}>
+                      <div className="w-60 h-30 bg-gray-300 dark:bg-gray-700 rounded-[5%] overflow-hidden relative">
+                        <Image
+                          src={F13Image}
+                          alt="Timeline Image"
+                          fill
+                          style={{ objectFit: "cover" }}
+                        />
+                      </div>
+                    </div>
                   </div>
                 ),
               },

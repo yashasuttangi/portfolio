@@ -81,7 +81,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             viewport={{ once: true }}
           >
             {/* Date / Title */}
-            <div className="relative flex items-start md:w-56 pl-12"> {/* pushed right from line */}
+            <div className="relative flex items-start md:w-60 pl-12">
               <div className="relative flex items-center">
                 <div className="absolute -left-[1.25rem] h-4 w-4 rounded-full bg-accent z-10 border-4 border-black" />
                 <h3 className="text-left text-3xl md:text-5xl font-extrabold text-accent tracking-wide leading-tight">

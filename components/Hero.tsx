@@ -11,6 +11,7 @@ import {
   FaLinkedin,
   FaEnvelope,
   FaCoffee,
+  FaInstagram,
 } from "react-icons/fa";
 import {
   SiReact,
@@ -38,7 +39,7 @@ import {
   SiNumpy,
   SiGithub,
   SiSqlite,
-  SiNextdotjs
+  SiNextdotjs,
 } from "react-icons/si";
 import Lottie from "lottie-react";
 import coderAnimation from "../public/animations/coder.json";
@@ -120,7 +121,12 @@ const Hero = () => {
               position="right"
             />
           </a>
-          <a href="/resume.pdf" download={"Yashas_Uttangi_Resume.pdf"} target="_blank" rel="noopener noreferrer">
+          <a
+            href="/resume.pdf"
+            download={"Yashas_Uttangi_Resume.pdf"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <MagicButton
               title="Resume"
               icon={<FaDownload />}
@@ -181,8 +187,8 @@ const Hero = () => {
                     {
                       icon: SiSqlite,
                       name: "SQL",
-                      color: "text-gray-400"
-                    }
+                      color: "text-gray-400",
+                    },
                   ].map((tech) => {
                     const Icon = tech.icon;
                     return (
@@ -210,7 +216,11 @@ const Hero = () => {
                 <div className="flex flex-wrap justify-center gap-6">
                   {[
                     { icon: SiReact, name: "React.js", color: "text-cyan-400" },
-                    { icon: SiNextdotjs, name: "Next.js", color: "text-black-500"},
+                    {
+                      icon: SiNextdotjs,
+                      name: "Next.js",
+                      color: "text-black-500",
+                    },
                     {
                       icon: SiNodedotjs,
                       name: "Node.js",
@@ -361,7 +371,7 @@ const Hero = () => {
                     { icon: SiOpencv, name: "OpenCV", color: "text-green-400" },
                     { icon: SiPandas, name: "Pandas", color: "text-blue-300" },
                     { icon: SiNumpy, name: "NumPy", color: "text-indigo-400" },
-                    { icon: SiPython, name: "NLTK", color: "text-gray-300"}
+                    { icon: SiPython, name: "NLTK", color: "text-gray-300" },
                   ].map((tech) => {
                     const Icon = tech.icon;
                     return (
@@ -389,23 +399,30 @@ const Hero = () => {
           <p className="text-sm uppercase tracking-wide opacity-70">
             Reach me at
           </p>
-          <div className="flex space-x-6">
+          <div className="flex space-x-8">
             <a
               href="https://github.com/yashasuttangi"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaGithub className="w-6 h-6 hover:text-purple-400 transition-colors" />
+              <FaGithub className="w-8 h-8 hover:text-purple-400 transition-colors" />
             </a>
             <a
               href="https://www.linkedin.com/in/yashas-uttangi-332898191/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLinkedin className="w-6 h-6 hover:text-purple-400 transition-colors" />
+              <FaLinkedin className="w-8 h-8 hover:text-purple-400 transition-colors" />
             </a>
             <a href="mailto:yashuttangi@gmail.com">
-              <FaEnvelope className="w-6 h-6 hover:text-purple-400 transition-colors" />
+              <FaEnvelope className="w-8 h-8 hover:text-purple-400 transition-colors" />
+            </a>
+            <a
+              href="https://www.instagram.com/yashas.uttangi/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram className="w-8 h-8 hover:text-purple-400 transition-colors" />
             </a>
           </div>
         </div>

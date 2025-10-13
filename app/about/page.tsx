@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import { BackgroundRippleEffect } from "@/components/ui/BackgroundRipple";
 import { FloatingNav } from "@/components/ui/FloatingNavBar";
 import { SpotlightNew } from "@/components/ui/SpotlightNew";
 import { FaHome, FaRProject } from "react-icons/fa";
@@ -21,6 +22,10 @@ export default function AboutPage() {
           gradientSecond="radial-gradient(50% 50% at 50% 50%, hsla(210, 100%, 85%, 0.09) 0, hsla(210, 100%, 55%, 0.03) 80%, transparent 100%)"
           gradientThird="radial-gradient(50% 50% at 50% 50%, hsla(210, 100%, 85%, 0.07) 0, hsla(210, 100%, 45%, 0.02) 80%, transparent 100%)"
         />
+        {/* Ripple background */}
+        <div className="absolute inset-0 top-0 h-[600px] z-2">
+          <BackgroundRippleEffect/>
+        </div>
         <About />
       </div>
     </main>

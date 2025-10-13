@@ -5,14 +5,13 @@ import { InfiniteMovingCards } from "../components/ui/InfiniteMovingCards";
 import { motion } from "framer-motion";
 
 const appreciations = [
-
   {
     quote:
       "Thank you Yashas for your exceptional efforts in stretching to support all React resources for quality delivery with a UX mindset for the soft launch 3. Your pivotal role in React related delivery and UX reflects your outstanding dedication, precision, and teamwork. Your hardwork has been instrumental to the project's success, and I wholeheartedly congratulate you on this well-deserved recognition.",
     name: "Anand Modanwal",
     title: "Business Analysis Manager",
   },
-   {
+  {
     quote:
       "Experts say that the first year of a new job is the toughest time, where you adjust to a new environment, learn new responsibilities, and build new relationships. It often involves a steep learning curve and can be very demanding. Congratulations on accomplishing the toughest milestone of completing your first-work anniversary. You have mastered UiPath, contributed to one of the high-priority initiatives in Test Automation, and continute to learn new things every day. Awesome job, keep up the great work !",
     name: "Raghu Ramamoorthy",
@@ -36,7 +35,6 @@ const appreciations = [
     name: "Sanjana Pentomsheety",
     title: "Design Architect",
   },
- 
 ];
 
 const roles = [
@@ -84,11 +82,10 @@ const roles = [
 
 const Experience = () => {
   return (
-      <div className="relative flex flex-col items-center lg:items-start justify-center my-20 z-10 w-full">
+    <div className="relative flex flex-col items-center lg:items-start justify-center my-20 z-10 w-full">
       {/* Premium Hero-like Background */}
 
       <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 w-[120%] h-[100%] bg-gradient-to-br from-purple-400/30 to-blue-400/20 rounded-[50%] blur-3xl z-0"></div>
-
 
       {/* Page Title */}
       <div className="w-full max-w-7xl mx-auto text-left mb-16 px-6 mt-20">
@@ -160,12 +157,14 @@ const Experience = () => {
         </p> */}
       </div>
       {/* Infinite Moving Cards */}
-      <div className="relative w-full max-w-[95%] mx-auto mt-5">
-        <InfiniteMovingCards
-          items={appreciations}
-          direction="left"
-          speed="slow"
-        />
+      <div className="w-full flex justify-center mt-5">
+        <div className="relative w-full max-w-7xl">
+          <InfiniteMovingCards
+            items={appreciations}
+            direction="left"
+            speed="slow"
+          />
+        </div>
       </div>
     </div>
   );

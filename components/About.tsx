@@ -222,7 +222,7 @@ const About = () => {
                       </span>
                     </p>
 
-                    <ul className="list-disc list-inside mt-2 ml-4 text-sm text-white space-y-2">
+                    {/* <ul className="list-disc list-inside mt-2 ml-4 text-sm text-white space-y-2">
                       <li>
                         Developed an RPA framework using UiPath Test Automation
                         to automate 1200+ regression test cases, reducing manual
@@ -238,7 +238,7 @@ const About = () => {
                         query tuning and indexing, reducing execution time by
                         40% and boosting data efficiency.
                       </li>
-                    </ul>
+                    </ul> */}
 
                     {/* Image Section */}
                     <div className="flex-shrink-0" style={{ paddingTop: 20 }}>
@@ -271,7 +271,7 @@ const About = () => {
                       </span>
                     </p>
 
-                    <ul className="list-disc list-inside mt-2 ml-4 text-sm text-white space-y-2">
+                    {/* <ul className="list-disc list-inside mt-2 ml-4 text-sm text-white space-y-2">
                       <li>
                         Built a scale model autonomous vehicle demonstrating
                         self-driving capabilities using computer vision and
@@ -282,7 +282,7 @@ const About = () => {
                         algorithms, enabling autonomous navigation in dynamic
                         environments.
                       </li>
-                    </ul>
+                    </ul> */}
                     {/* Image Section */}
                     <div className="flex-shrink-0" style={{ paddingTop: 20 }}>
                       <div className="w-60 h-40 bg-gray-300 dark:bg-gray-700 rounded-[5%] overflow-hidden relative">
@@ -314,7 +314,7 @@ const About = () => {
                       </span>
                     </p>
 
-                    <ul className="list-disc list-inside mt-2 ml-4 text-sm text-white space-y-2">
+                    {/* <ul className="list-disc list-inside mt-2 ml-4 text-sm text-white space-y-2">
                       <li>
                         Designed and implemented cloud infrastructure solutions
                         using AWS EC2, S3, RDS, and Lambda, optimizing
@@ -328,7 +328,7 @@ const About = () => {
                         Earned six AWS certifications, gaining expertise across
                         cloud architecture, security, and deployment.
                       </li>
-                    </ul>
+                    </ul> */}
                     {/* Image Section */}
                     <div className="flex-shrink-0" style={{ paddingTop: 20 }}>
                       <div className="w-60 h-30 bg-gray-300 dark:bg-gray-700 rounded-[5%] overflow-hidden relative">

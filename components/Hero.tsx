@@ -93,36 +93,39 @@ const Hero = () => {
         <div className="relative flex flex-col lg:flex-row items-center gap-8 z-10 w-full">
           {/* Text Section */}
           <div className="lg:w-2/3 flex flex-col space-y-5 px-12 lg:px-16">
-  <TextGenerateEffect
-    className="text-left text-[36px] md:text-5xl lg:text-6xl font-bold z-20"
-    words={"Hi, I'm Yashas, a Software Engineer based in Boston"}
-  />
+            <TextGenerateEffect
+              className="text-left text-[36px] md:text-5xl lg:text-6xl font-bold z-20"
+              words={"Hi, I'm Yashas, a Software Engineer based in Boston"}
+            />
 
-  {/* Highlighted Roles with Liquid Glass Effect */}
-  <div className="flex flex-wrap gap-4 mt-2">
-    <span className="px-4 py-2 rounded-xl text-sm md:text-base font-semibold backdrop-blur-md bg-white/15 text-white border border-white/20 shadow-lg">
-      Full-stack Developer
-    </span>
-    <span className="px-4 py-2 rounded-xl text-sm md:text-base font-semibold backdrop-blur-md bg-white/15 text-white border border-white/20 shadow-lg">
-      AI Enthusiast
-    </span>
-    <span className="px-4 py-2 rounded-xl text-sm md:text-base font-semibold backdrop-blur-md bg-white/15 text-white border border-white/20 shadow-lg">
-      Ex-Cisco Software Engineer
-    </span>
-  </div>
+            {/* Highlighted Roles with Liquid Glass Effect */}
+            <div className="flex flex-wrap gap-4 mt-2">
+              <span className="px-4 py-2 rounded-xl text-sm md:text-base font-semibold backdrop-blur-md bg-white/15 text-white border border-white/20 shadow-lg">
+                Full-stack Developer
+              </span>
+              <span className="px-4 py-2 rounded-xl text-sm md:text-base font-semibold backdrop-blur-md bg-white/15 text-white border border-white/20 shadow-lg">
+                AI Enthusiast
+              </span>
+              <span className="px-4 py-2 rounded-xl text-sm md:text-base font-semibold backdrop-blur-md bg-white/15 text-white border border-white/20 shadow-lg">
+                Ex-Cisco Software Engineer
+              </span>
+            </div>
 
-  {/* Description */}
-  <p className="text-lg opacity-80 leading-relaxed mt-4">
-    I design and develop systems that learn, scale, and solve real-world challenges.  
-    Currently pursuing my <strong>Master&apos;s in Computer Science at Northeastern University</strong>,  
-    I&apos;m constantly expanding my horizons and upskilling to tackle the next wave of innovation.
-    <br />
-<span className="text-indigo-200 font-semibold text-xl md:text-xl">
-  Let's innovate together.
-</span>
-  </p>
-</div>
-
+            {/* Description */}
+            <p className="text-lg opacity-80 leading-relaxed mt-4">
+              I design and develop systems that learn, scale, and solve
+              real-world challenges. Currently pursuing my{" "}
+              <strong>
+                Master&apos;s in Computer Science at Northeastern University
+              </strong>
+              , I&apos;m constantly expanding my horizons and upskilling to
+              tackle the next wave of innovation.
+              <br />
+              <span className="text-indigo-200 font-semibold text-xl md:text-xl">
+                Let&apos;s innovate together.
+              </span>
+            </p>
+          </div>
 
           {/* Animation Section */}
           <div className="lg:w-1/3 flex justify-center relative">

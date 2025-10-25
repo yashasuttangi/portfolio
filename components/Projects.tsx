@@ -3,10 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import PlacementPortal1 from "../components/resources/Projects/PlacementPortal/PlacementPortal1.png";
-import ProjectImage2 from "../components/resources/NEUImage.jpg";
-// import ProjectImage3 from "../components/resources/NEUImage.jpg";
 import AikyaMind1 from "../components/resources/Projects/AikyaMind/AikyaMind1.jpg";
-import AikyaMind2 from "../components/resources/Projects/AikyaMind/AikyaMind2.jpg";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 
 const projects: BentoGridItem[] = [

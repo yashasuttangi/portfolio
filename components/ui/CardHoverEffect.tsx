@@ -42,20 +42,30 @@ export const HoverEffect = ({
           onClick={() => onItemClick?.(item)}
         >
           <Card className="flex flex-col h-[400px]">
-            {item.image && (
-              <div className="relative w-full flex-shrink-0 h-[60%] rounded-t-2xl overflow-hidden">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  style={{ objectFit: "cover" }}
-                />
+            {item.image ? (
+              <>
+                <div className="relative w-full flex-shrink-0 h-[60%] rounded-t-2xl overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    style={{ objectFit: "contain", objectPosition: "center" }}
+                  />
+                </div>
+                <div className="flex flex-col p-4 h-[40%]">
+                  <CardTitle>{item.title}</CardTitle>
+                  <CardDescription>{item.description}</CardDescription>
+                </div>
+              </>
+            ) : (
+              // When there is no image, use the full height for text
+              <div className="flex flex-col justify-center p-6 h-full">
+                <CardTitle>{item.title}</CardTitle>
+                <CardDescription className="mt-2">
+                  {item.description}
+                </CardDescription>
               </div>
             )}
-            <div className="flex flex-col p-4 h-[40%]">
-              <CardTitle>{item.title}</CardTitle>
-              <CardDescription>{item.description}</CardDescription>
-            </div>
           </Card>
         </div>
       ))}
